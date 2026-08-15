@@ -1,0 +1,16 @@
+[project]
+name = "fastapi-beginner"
+version = "0.1.0"
+description = "learning FastAPI by building an Analytics API"
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "fastapi (>=0.141.1,<0.142.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
