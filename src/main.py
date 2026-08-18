@@ -38,4 +38,10 @@ Uvicorn is just one ASGI server.
 For example, you could use:
 Uvicorn — most common for FastAPI development
 Hypercorn
+
+To run fastapi application:::: poetry run uvicorn main:app --reload
+
+To build a docker:: docker build -t my-python-app .
+To run the docker:: docker run --rm -p 8000:8000 my-python-app
+To validate: http://localhost:8000
 """
