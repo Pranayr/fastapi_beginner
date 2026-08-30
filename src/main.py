@@ -106,4 +106,8 @@ to stop: docker compose down
 =========
 To keep the endpoint valid, we use pydantic, so that data to the endpoint and from the responses is valid
 and raises errors if any.
+
+=====
+
+HTTP PUT Request
 """
