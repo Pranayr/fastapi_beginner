@@ -1,11 +1,11 @@
 from fastapi import APIRouter
-from .schemas import (
+from .models import (
     EventSchema, 
-    EventListSchema, 
+    EventListSchema,                                                                                                                            
     EventCreateSchema,
     EventUpdateSchema
     )
-
+from src.api.db.config import DATABASE_URL
 
 router = APIRouter()
 
@@ -27,8 +27,7 @@ def get_event(event_id:int) -> EventSchema:
 def create_event(payload:EventCreateSchema) -> EventSchema:
     
     data = payload.model_dump()
-
-    return {"id": 123, "page": **data} #payload.page
+    return {"id": 123, "page":  payload.page} #. **data
     
 
 @router.put("/{event_id}")
@@ -36,6 +35,7 @@ def update_event(event_id:int, payload:EventUpdateSchema) -> EventSchema:
     data = payload.model_dump()
     return {
        "id": event_id,
-       "description": **data} #payload.description
+       "description": payload.description
+    }
     
 
